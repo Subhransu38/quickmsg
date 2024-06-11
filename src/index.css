@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+  *{
+    font-family: "Lucida Sans","Lucida Sans Regular","Lucida Grande","Lucida Sans Unicode", Geneva, Verdana, sans-serif ;
+    @apply scrollbar-gutter
+  }
+  .input{
+    @apply p-3 border-none outline-none bg-[rgba(17,25,40,0.6)] text-white rounded
+  }
+  .btn{
+    @apply w-full p-3 border-none bg-[#1f8ef1] text-white rounded cursor-pointer font-medium disabled:cursor-not-allowed disabled:bg-[#1f8ff186]
+  }
+}
+
+@layer utilities {
+  .scrollbar-gutter{
+    scrollbar-gutter: stable;
+  }
+  /* Scrollbar container */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* Scrollbar track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Scrollbar handle */
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+  }
+
+  /* Scrollbar handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333;
+  }
+}
